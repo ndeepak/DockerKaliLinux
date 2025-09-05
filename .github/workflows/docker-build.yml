@@ -37,7 +37,7 @@ jobs:
           elif [[ "$BRANCH_NAME" == "test" ]]; then
             echo "TAGS=ndeepak0x/customkali:test" >> $GITHUB_ENV
           elif [[ "$BRANCH_NAME" == "main" ]]; then
-            echo "TAGS=ndeepak0x/customkali:stable ndeepak0x/customkali:latest" >> $GITHUB_ENV
+            echo "TAGS=ndeepak0x/customkali:stable,ndeepak0x/customkali:latest" >> $GITHUB_ENV
           elif [[ "$BRANCH_NAME" == release/* ]]; then
             VERSION=$(echo "$BRANCH_NAME" | cut -d'/' -f2)
             echo "TAGS=ndeepak0x/customkali:v${VERSION}" >> $GITHUB_ENV
